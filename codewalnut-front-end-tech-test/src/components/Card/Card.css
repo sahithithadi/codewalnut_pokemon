@@ -1,0 +1,33 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 16px;
+  width: 100%;
+  overflow: hidden auto;
+  padding: 0.5em;
+}
+
+.card-box {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 4px grey;
+}
+
+.card-value {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-type {
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(180deg, #3a76f2, yellow);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: small;
+}

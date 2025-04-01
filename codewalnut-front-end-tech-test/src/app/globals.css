@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --background: #ffffff; */
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  /* background-image: url("../../public/images/pokemon.jpg");
+  background-repeat: repeat; */
+  /* background-size: 50px; */
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1em;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 35em;
+  background: #f2ca3a;
+  border-radius: 16px;
+  width: 100%;
+  padding: 1em;
+}
+
+.poki-container {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+.input {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.input:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.btn {
+  background-color: #316fffcf;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 10px;
+  transition: background-color 0.6s;
+}
+
+.btn:hover {
+  background-color: #316ffff5;
+}
+
+.not-found {
+  height: 100%;
+  text-align: center;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details-container {
+  display: flex;
+  width: 100%;
+}
+
+.details-container img {
+  flex-grow: 2;
+  padding: 2em;
+  background: rgb(183, 75, 27);
+  background: radial-gradient(
+    circle,
+    rgba(183, 75, 27, 0.8033713973870799) 0%,
+    rgba(252, 207, 36, 0.8145758791797969) 50%
+  );
+  border-radius: 50%;
+}
+
+.details {
+  flex-grow: 6;
+  padding: 2em;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgb(148, 143, 98, 0.4);
+  font-weight: bold;
+  border-radius: 2em;
+}
+
+.box {
+  display: flex;
+}
+
+.head {
+  width: 15%;
+}
+
+@media only screen and (max-width: 640px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden auto;
+  }
+
+  .details-container img {
+    flex-grow: 1;
+    padding: 0;
+    height: 150px;
+    width: 150px;
+  }
+
+  .details {
+    padding: 1em;
+    width: 100%;
+  }
+
+  .head {
+    width: 20%;
+  }
+}
+
+.MuiLinearProgress-root {
+  background-color: none;
+  height: 8px !important;
+  border-radius: 4px;
+}
+
+.home {
+  font-size: 3em;
+  font-weight: bold;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
